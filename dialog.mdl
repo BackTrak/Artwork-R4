@@ -1366,7 +1366,11 @@ TargetOval =
     );
 
 
-TargetOvalColor = ImportImage3D("targetovalcolorbmp", targetHudColor, true);
+TargetOvalColor = 
+		BlendImage(
+			ImportImage3D("targetovalcolorbmp", targetHudColor, true),
+            hudBlendMode
+    );
         
 TargetOvalWord1 = 
   BlendImage(
